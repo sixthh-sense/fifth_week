@@ -9,5 +9,5 @@ import java.util.List;
 @Repository
 public interface RegisterRepository extends JpaRepository<Restaurant, Long> {
     List<Restaurant> findAll();
-    List<Restaurant> findAllByOrderByModifiedAtDesc();
+    //List<Restaurant> findAllByOrderByModifiedAtDesc(); // Timestamped의 흔적.
 }
