@@ -1,7 +1,14 @@
 package com.sparta.fifthweek.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+
 import java.util.List;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
 public class OrderDto {
     // 필요하다면 이 부분에 "내부 클래스"를 하나 더 만들 수 있긴 하지만 결합도가 높아져서(분자구조, 2당구조에서 3당구조가 되는 것과 비슷?) 그리 일반적으로 선호하는 방식은 아니다?
 
@@ -14,5 +21,9 @@ public class OrderDto {
 
     private int deliveryFee;
     private int totalPrice;
+
+//    public OrderDto() {
+//
+//    }
     // "총합" 개념의 price를 모두 더한 값 + deliveryFee
 }
