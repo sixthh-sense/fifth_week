@@ -12,8 +12,8 @@ import javax.persistence.*;
 @Entity
 public class Restaurant {
 
-    // primary key: Id, "전략"은 "자동으로 생성 및 증가"
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    // primary key: Id, "전략"은 "자동으로 생성 및 증가": 조합이 아닌 기초 Entity 개념? 그래서 primary key generation type을 auto로 설정?
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
 

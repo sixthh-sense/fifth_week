@@ -21,8 +21,10 @@ public class RestaurantService {
         int minOrderPrice = requestDto.getMinOrderPrice();
         int deliveryFee = requestDto.getDeliveryFee();
 
+        // 배달료 설정
         final int MAX_DELIVERY = 10000;
         final int MIN_DELIVERY = 0;
+        //주문가격 설정
         final int MAX_PRICE = 100000;
         final int MIN_PRICE = 1000; // 원래는 private static 도 붙여 썼는데 여기는 왜 안 될까? @Component가 아니라서? 아니면 @Transactional이라서?
 

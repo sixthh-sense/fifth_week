@@ -12,7 +12,7 @@ import javax.persistence.*;
 public class Food {
 
     //"음식(메뉴)"의 ID
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     private Long id;
 
@@ -31,14 +31,14 @@ public class Food {
     @Column
     private String name;
 
-    //메뉴 가격
+    //메뉴 가격(개당 가격)
     @Column
     private int price;
     // 여기까지가 기본(#2번까지)
 
-    @Column
-    private int quantity;
-    // #3 quantity 항목 추가?
+//    @Column
+//    private int quantity;
+//    // #3 quantity 항목 추가?
     // quantity 항목을 아마 Food Entity에 추가하게 될 텐데,
 
     public Food(FoodDto requestDto, Restaurant restaurant) {
@@ -56,4 +56,6 @@ public class Food {
 //    }
 
     // #2 RequestBody가 단순 1개 입력하는 게 아니라 "배열"을 입력해야 하는 것.
+
+    // 여기도 Builder추가할까?
 }
